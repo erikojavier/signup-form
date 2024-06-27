@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'quick_end_jerkregular';
+    src: url('quick_end_jerk-webfont.woff2') format('woff2'),
+         url('quick_end_jerk-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+    font-family: 'josefin_sansregular';
+    src: url('josefinsans-regular-webfont.woff2') format('woff2'),
+         url('josefinsans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --txt-clr: #b65501;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'josefin_sansregular';
+}
+
+.main {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.leftside {
+    width: 40vw;
+    background-image: url(images/roadtrip.jpg);
+    background-size:cover;
+}
+
+.brand {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top:31vh;
+    gap: 5px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    z-index: 2;
+}
+
+.title {
+    color: #fefae0;
+    font-size: 2.7rem;
+    margin-top: 5px;
+    z-index: 2;
+    font-family: 'quick_end_jerkregular';
+    text-shadow: 1px 1px 2px black;
+}
+
+.title-bg {
+    width: 40vw;
+    height: 90px;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.7;
+    position: relative;
+    top: 18vh;
+}
+
+.img-credit {
+    text-align: center;
+    margin-top: 70vh;
+    font-size: 0.7rem;
+}
+
+.content {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff8ce;
+}
+
+.paras { 
+    margin: 2vh 0 7vh 0;
+    width: 90%;
+    font-size: 1.2rem;
+    color: var(--txt-clr);
+}
+
+.p3 {
+    margin-top: 20px;
+}
+
+.form-color {
+    background-color: #fefae0;
+    box-shadow: 0 6px 6px -2px rgb(146, 138, 124);
+    color: var(--txt-clr);
+    padding-top: 1vh;
+}
+
+.mid-text {
+    margin: 0 0 4vh 0;
+    font-size: 1.4rem;
+}
+
+label, input {
+    display: flex;
+}
+
+label {
+    font-size: 0.8rem;
+}
+
+input {
+    margin-top: 2px;
+    margin-bottom: 3vh;
+    font-size: 1rem;
+    width:21vw;
+    outline: none;
+    border: 1px solid rgb(154, 154, 154);
+    border-radius: 4px;
+}
+
+.form {
+    margin-bottom: 3vh;
+}
+
+.mid {
+    display: flex;
+    gap: 70px;
+}
+
+.btn {
+    width: 200px;
+    height: 50px;
+    background-color: #fefae0;
+    color: var(--txt-clr);
+    margin-top: 4vh;
+    border: 2px solid var(--txt-clr);
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.login {
+    margin-top: 4vh;
+    color: var(--txt-clr);
+}
+
+.left {
+    margin-left: 3vw;
+}
+
+input:focus {
+    border: 1px solid blue;
+    box-shadow: 1px 1px 2px 1px rgb(154, 154, 154);
+}
+
+
+input[type="password"]:invalid {
+    border: 1px solid red;
+}
+
+
+
+@media (max-width: 600px) {
+    .main {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .leftside {
+        width:100%;
+        background-position-y: 56%;
+        height: 15vh;
+    }
+    
+    .brand {
+        position: relative;
+        top: 7vh;
+    }
+
+    .logo {
+        position: relative;
+        bottom:20px;
+    }
+
+    .title {
+        position: relative;
+        bottom:20px;
+        color: whitesmoke;
+    }
+
+    .title-bg {
+        width: 0;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .mid-text {
+        font-size: 2rem;
+    }
+
+    .mid {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    
+    .form {
+        margin: 0;
+    }
+
+    input, label {
+        flex-direction: column;
+    }
+
+    input {
+        width: 50vw;
+    }
+
+    .btn {
+        width: 40vw;
+        font-size: 1.2rem;
+    }
+
+}
